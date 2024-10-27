@@ -16,12 +16,14 @@
   <div>
 
     <script type="text/javascript">
- 
+
       //    Computer choice is hardcoded to "Bear"
+
+      const computerchoice = "Bear"
+
       //    Present a text field to gather user input.
       //    Store the user's input in a variable.
 
-      const computerchoice = "Bear"
       let playername = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started:');
 
       //    Put together messages for the players that combine text and the values of the variables from the user input (concatenation).
@@ -31,15 +33,15 @@
       alert(`Hi ${playername}, Let's Play`);
 
       let playerchoice = prompt('Who are you: Bear, Ninja or Hunter?');
-  
+
       //    Output the concatenated strings using two (2) different output methods.
 
-      console.log('The player entered: ' + playerchoice); 
-      console.log('The computer chose: ' + computerchoice); 
+      console.log('The player entered: ' + playerchoice);
+      console.log('The computer chose: ' + computerchoice);
 
       document.getElementById('displaytext').innerHTML = `You entered: ${playerchoice}`;
-     
-    </script> 
+
+    </script>
   </div>
 
 </body>
