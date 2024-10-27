@@ -6,41 +6,40 @@
   <meta name="author" content="Tiger Puri">
   <meta name="description" content="Coding Assignment 6">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
- 
-  
 
   <title>Tiger Puri Bear Ninja Hunter</title>
 </head>
 
 <body>
   <h1>Tiger Puri Bear-Ninja-Hunter</h1><br>
-  <p id="demo">Replace this content with scripted content</p>
+  <p id="displaytext">Replace this content with scripted content</p>
   <div>
+
     <script type="text/javascript">
-      alert(`Hello World`);
-      <!-- prompt(`Hello World`); -->
-      let uname = prompt('To continue, please enter your uname: ');
-      let response = `You have entered: ${uname}`;
-      console.log(response + ' this is the entered item.'); 
-      document.getElementById('demo').innerHTML = `answer :${response}`;
+ 
+      //    Computer choice is hardcoded to "Bear"
+      //    Present a text field to gather user input.
+      //    Store the user's input in a variable.
+
+      const computerchoice = "Bear"
+      let playername = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started:');
+
+      //    Put together messages for the players that combine text and the values of the variables from the user input (concatenation).
+
+     // let response = `Hi ${playername}, Let's Play`;
+
+      alert(`Hi ${playername}, Let's Play`);
+
+      let playerchoice = prompt('Who are you: Bear, Ninja or Hunter?');
+  
+      //    Output the concatenated strings using two (2) different output methods.
+
+      console.log('The player entered: ' + playerchoice); 
+      console.log('The computer chose: ' + computerchoice); 
+
+      document.getElementById('displaytext').innerHTML = `You entered: ${playerchoice}`;
      
     </script> 
-  </div>
-
-
-
-
-
-
-
-  <!-- ROW 1 - FOOTER -->
-  <div class="row">
-    <div class="col" style="width:100%">
-      <p>
-        <a href="https://spainonafork.com/authentic-spanish-seafood-paella-recipe/">Recipe by Albert Brevia</a>
-      </p></div>
-    </div>
   </div>
 
 </body>
