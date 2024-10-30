@@ -24,7 +24,10 @@
       //    Present a text field to gather user input.
       //    Store the user's input in a variable.
 
-      let playername = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started:');
+      let gameresult = `Let's Play`;
+      document.getElementById('displaytext').innerHTML = `${gameresult}`;
+
+      let playername = prompt(`Welcome to Bear Hunter Ninja! Please enter your name to get started:`);
 
       //    Put together messages for the players that combine text and the values of the variables from the user input (concatenation).
 
@@ -39,8 +42,64 @@
       console.log('The player entered: ' + playerchoice);
       console.log('The computer chose: ' + computerchoice);
 
-      document.getElementById('displaytext').innerHTML = `You entered: ${playerchoice}`;
+      document.getElementById('displaytext').innerHTML = `${playername} You chose ${playerchoice}`;
+      document.getElementById('displaytext').innerHTML = `The computer chose ${computerchoice}`;
 
+      switch (playerchoice) {
+        case 'Bear': {
+          switch (computerchoice) {
+          case 'Bear':
+            gameresult = console.log(`It's a Tie!`);
+            break;
+          case 'Ninja':
+            gameresult = console.log(`You win!`);
+            break;
+          case 'Hunter':
+            gameresult = console.log(`The computer has won!`);
+            break;
+          default:
+            gameresult = console.log(`Error, please try again.`);
+          }
+        }    
+
+        case 'Ninja': {
+          switch (computerchoice) {
+          case 'Bear':
+            gameresult = console.log(`The computer has won!`);
+            break;
+          case 'Ninja':
+            gameresult = console.log(`It's a Tie!`);
+            break;
+          case 'Hunter':
+            gameresult = console.log(`You win!`);
+            break;
+          default:
+            gameresult = console.log(`Error, please try again.`);
+          }
+        }    
+
+        case 'Hunter': {
+          switch (computerchoice) {
+          case 'Bear':
+            gameresult = console.log(`You win!`);
+            break;
+          case 'Ninja':
+            gameresult = console.log(`The computer has won!`);
+            break;
+          case 'Hunter':
+            gameresult = console.log(`It's a Tie!`);  
+            break;
+          default:
+            gameresult = console.log(`Error, please try again.`);
+          }
+        }    
+        default:
+          gameresult = console.log(`You have entered an invalid choice, please try again.`);
+          
+      }
+
+      document.getElementById('displaytext').innerHTML = `${gameresult}`;
+      
     </script>
   </div>
 
