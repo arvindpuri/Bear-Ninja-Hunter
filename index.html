@@ -22,7 +22,7 @@
 
       //    Computer choice is hardcoded to "Bear"
 
-      const computerchoice = "Bear"
+      const computerchoice = "Bear";
 
       //    Present a text field to gather user input.
       //    Store the user's input in a variable.
@@ -48,6 +48,8 @@
       document.getElementById('displaytext_2').innerHTML = `The computer chose ${computerchoice}!`;
 
       switch (playerchoice) {
+
+        // Here we evaluate the conditions if the computer chooses Bear 
         case 'Bear': {
           switch (computerchoice) {
           case 'Bear':
@@ -68,6 +70,9 @@
           }
         }
         break;
+
+        // Here we evaluate the conditions if the computer chooses Ninja 
+
 
         case 'Ninja': {
           switch (computerchoice) {
@@ -90,6 +95,9 @@
         }
         break;    
 
+        // Here we evaluate the conditions if the computer chooses Hunter 
+
+
         case 'Hunter': {
           switch (computerchoice) {
           case 'Bear':
@@ -111,9 +119,17 @@
         }
         break;
 
+          // Here we evaluate the conditions if the computer doesn't make a choice and the user makes an invalid entry 
+
+
         default:
+        if (playerchoice != null) {
+          console.log(`Invalid input, please try again.`);
+          document.getElementById('displaytext_3').innerHTML = `Invalid input, please try again.`;
+        } else {
           console.log(`Error, please try again.`);
           document.getElementById('displaytext_3').innerHTML = `Error, please try again.`;
+        }
       }
 
     </script>
