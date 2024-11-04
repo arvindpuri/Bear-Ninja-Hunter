@@ -16,7 +16,7 @@
   <p id="displaytext_2">Replace this content with scripted content</p>
   <p id="displaytext_3">Replace this content with scripted content</p>
 
-  <div>
+  
 
     <script type="text/javascript">
 
@@ -44,8 +44,8 @@
       console.log('The player entered: ' + playerchoice);
       console.log('The computer chose: ' + computerchoice);
 
-      document.getElementById('displaytext_1').innerHTML = `${playername}, You chose ${playerchoice}.`;
-      document.getElementById('displaytext_2').innerHTML = `The computer chose ${computerchoice}.`;
+      document.getElementById('displaytext_1').innerHTML = `${playername}, You chose ${playerchoice}!`;
+      document.getElementById('displaytext_2').innerHTML = `The computer chose ${computerchoice}!`;
 
       switch (playerchoice) {
         case 'Bear': {
@@ -117,6 +117,6 @@
       }
 
     </script>
-  </div>
+
 
 </body>
