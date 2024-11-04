@@ -12,7 +12,10 @@
 
 <body>
   <h1>Tiger Puri Bear-Ninja-Hunter</h1><br>
-  <p id="displaytext">Replace this content with scripted content</p>
+  <p id="displaytext_1">Replace this content with scripted content</p>
+  <p id="displaytext_2">Replace this content with scripted content</p>
+  <p id="displaytext_3">Replace this content with scripted content</p>
+
   <div>
 
     <script type="text/javascript">
@@ -24,8 +27,7 @@
       //    Present a text field to gather user input.
       //    Store the user's input in a variable.
 
-      let gameresult = `Let's Play`;
-      document.getElementById('displaytext').innerHTML = `${gameresult}`;
+      
 
       let playername = prompt(`Welcome to Bear Hunter Ninja! Please enter your name to get started:`);
 
@@ -42,64 +44,78 @@
       console.log('The player entered: ' + playerchoice);
       console.log('The computer chose: ' + computerchoice);
 
-      document.getElementById('displaytext').innerHTML = `${playername} You chose ${playerchoice}`;
-      document.getElementById('displaytext').innerHTML = `The computer chose ${computerchoice}`;
+      document.getElementById('displaytext_1').innerHTML = `${playername}, You chose ${playerchoice}.`;
+      document.getElementById('displaytext_2').innerHTML = `The computer chose ${computerchoice}.`;
 
       switch (playerchoice) {
         case 'Bear': {
           switch (computerchoice) {
           case 'Bear':
-            gameresult = console.log(`It's a Tie!`);
+            console.log(`It's a Tie!`);
+            document.getElementById('displaytext_3').innerHTML = `It's a Tie!`;
             break;
           case 'Ninja':
-            gameresult = console.log(`You win!`);
+            console.log(`You win!`);
+            document.getElementById('displaytext_3').innerHTML = `You win!`;
             break;
           case 'Hunter':
-            gameresult = console.log(`The computer has won!`);
+            console.log(`The computer has won!`);
+            document.getElementById('displaytext_3').innerHTML = `The computer has won!`;
             break;
           default:
-            gameresult = console.log(`Error, please try again.`);
+            console.log(`Error, please try again.`);
+            document.getElementById('displaytext_3').innerHTML = `Error, please try again.`;
           }
-        }    
+        }
+        break;
 
         case 'Ninja': {
           switch (computerchoice) {
           case 'Bear':
-            gameresult = console.log(`The computer has won!`);
+            console.log(`The computer has won!`);
+            document.getElementById('displaytext_3').innerHTML = `The computer has won!`;
             break;
           case 'Ninja':
-            gameresult = console.log(`It's a Tie!`);
+            console.log(`It's a Tie!`);
+            document.getElementById('displaytext_3').innerHTML = `It's a Tie!`;
             break;
           case 'Hunter':
-            gameresult = console.log(`You win!`);
+            console.log(`You win!`);
+            document.getElementById('displaytext_3').innerHTML = `You win!`;
             break;
           default:
-            gameresult = console.log(`Error, please try again.`);
+            console.log(`Error, please try again.`);
+            document.getElementById('displaytext_3').innerHTML = `Error, please try again.`;
           }
-        }    
+        }
+        break;    
 
         case 'Hunter': {
           switch (computerchoice) {
           case 'Bear':
-            gameresult = console.log(`You win!`);
+            console.log(`You win!`);
+            document.getElementById('displaytext_3').innerHTML = `You win!`;
             break;
           case 'Ninja':
-            gameresult = console.log(`The computer has won!`);
+            console.log(`The computer has won!`);
+            document.getElementById('displaytext_3').innerHTML = `The computer has won!`;
             break;
           case 'Hunter':
-            gameresult = console.log(`It's a Tie!`);  
+            console.log(`It's a Tie!`);
+            document.getElementById('displaytext_3').innerHTML = `It's a Tie!`;
             break;
           default:
-            gameresult = console.log(`Error, please try again.`);
+            console.log(`Error, please try again.`);
+            document.getElementById('displaytext_3').innerHTML = `Error, please try again.`;
           }
-        }    
+        }
+        break;
+
         default:
-          gameresult = console.log(`You have entered an invalid choice, please try again.`);
-          
+          console.log(`Error, please try again.`);
+          document.getElementById('displaytext_3').innerHTML = `Error, please try again.`;
       }
 
-      document.getElementById('displaytext').innerHTML = `${gameresult}`;
-      
     </script>
   </div>
 
